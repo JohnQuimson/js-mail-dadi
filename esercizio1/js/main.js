@@ -3,7 +3,13 @@
 // const elementMail = document.getElementById('email');
 // console.log(elementMail.value);
 
-const arrayMail = ['prova1', 'prova2', 'prova3', 'prova4'];
+const arrayMail = [
+  'john.quimson@gmail.com',
+  'geatanofrascolla@gmail.com',
+  'edwin@gmail.com',
+  'evan@gmail.com',
+  'ciao@gmail.com',
+];
 
 const inputUtente = prompt('Inserisci la tua mail');
 let verifica = false;
