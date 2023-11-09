@@ -3,30 +3,16 @@
 // const elementMail = document.getElementById('email');
 // console.log(elementMail.value);
 
-const arrayMail = [
-  'cocaha@gmail.com',
-  'pev@tgmail.com',
-  'zer@tiplolgmail.com',
-  'fihzasu@revegmail.com',
-  'le@bigagmail.com',
-  'mekinipur@gmail.com',
-  'uraane@gogmail.com',
-  'hatgmail.com',
-  'kemigmail.com',
-  'wusdezkud@fiakgmail.com',
-  'terowzi@olgmail.com',
-  'nodom@lavgmail.com',
-  'fegmail.com',
-  'lisaoj@cugmail.com',
-  'kotgmail.com',
-  'ciczimgmail.com',
-  'gugdohe@mirazgmail.com',
-  'kovme@tugmail.com',
-  'jikoja@zargmail.com',
-  'etgmail.com',
-];
+const arrayMail = ['prova1', 'prova2', 'prova3', 'prova4'];
 
-console.log(arrayMail);
+// console.log(arrayMail);
 
 const inputUtente = prompt('Inserisci la tua mail');
-console.log(inputUtente);
+// console.log(inputUtente);
+
+for (let i = 0; i < arrayMail.length; i++) {
+  if (arrayMail[i] === inputUtente) {
+    console.log('La tua mail è sulla lista, alla posizione: ' + i);
+  }
+}
+console.log('La tua mail NON è in lista');
