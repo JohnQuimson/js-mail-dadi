@@ -1,5 +1,8 @@
 'use strict';
 
+// const elementMail = document.getElementById('email');
+// console.log(elementMail.value);
+
 const arrayMail = [
   'cocaha@gmail.com',
   'pev@tgmail.com',
@@ -22,3 +25,8 @@ const arrayMail = [
   'jikoja@zargmail.com',
   'etgmail.com',
 ];
+
+console.log(arrayMail);
+
+const inputUtente = prompt('Inserisci la tua mail');
+console.log(inputUtente);
