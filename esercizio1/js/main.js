@@ -1,30 +1,41 @@
 'use strict';
 
-// const elementMail = document.getElementById('email');
-// console.log(elementMail.value);
+const btnInvio = document.getElementById('invio');
+const elementSiLista = document.getElementById('si-lista');
+const elementNoLista = document.getElementById('no-lista');
+btnInvio.addEventListener('click', function () {
+  //Estraggo il valore dell'input con id email
+  const elementMail = document.getElementById('email').value;
+  console.log(elementMail);
 
-const arrayMail = [
-  'john.quimson@gmail.com',
-  'geatanofrascolla@gmail.com',
-  'edwin@gmail.com',
-  'evan@gmail.com',
-  'ciao@gmail.com',
-];
+  //Array di verifica
+  const arrayMail = [
+    'john.quimson@gmail.com',
+    'geatanofrascolla@gmail.com',
+    'edwin@gmail.com',
+    'evan@gmail.com',
+    'ciao@gmail.com',
+  ];
 
-const inputUtente = prompt('Inserisci la tua mail');
-let verifica = false;
+  //Dichiaro una variabile verifica con false
+  let verifica = false;
 
-//Itero gli elementi dell'array
-for (let i = 0; i < arrayMail.length; i++) {
-  //verifico se input è uguale all elemento array[i]
-  if (arrayMail[i] === inputUtente) {
-    verifica = true;
+  //Itero gli elementi dell'array
+  for (let i = 0; i < arrayMail.length; i++) {
+    //verifico se input è uguale all elemento array[i]
+    if (arrayMail[i] === elementMail) {
+      verifica = true;
+    }
   }
-}
 
-//Stampa
-if (verifica === true) {
-  console.log('La tua mail è in lista');
-} else {
-  console.log('La tua mail NON è in lista');
-}
+  //Condizioni di stampa
+  if (verifica === true) {
+    console.log('La tua mail è in lista');
+    //se si verifica la condizione, rimuovi la classe d-none
+    elementSiLista.classList.remove('d-none');
+  } else {
+    console.log('La tua mail NON è in lista');
+    //se si verifica la condizione, rimuovi la classe d-none
+    elementNoLista.classList.remove('d-none');
+  }
+});

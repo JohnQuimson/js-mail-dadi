@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esercizio Mail e Dadi</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Boostrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,6 +21,7 @@
       crossorigin="anonymous"
     />
     <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Boostrap JS -->
@@ -24,8 +33,25 @@
     <!-- Boostrap JS -->
 
     <main>
-      <label for="email">Inserisci la tua mail</label>
-      <input type="text" id="email" placeholder="email" />
+      <div
+        class="d-flex flex-column justify-content-center align-items-center mt-5"
+      >
+        <label for="email">
+          <h3 class="jq-uppercase">Inserisci la tua mail</h3>
+        </label>
+        <div class="d-flex gap-4 align-items-center mt-3">
+          <input type="text" id="email" placeholder="email" />
+          <button id="invio" class="jq-uppercase">invio</button>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center flex-column align-items-center mt-5"
+      >
+        <h4 id="si-lista" class="d-none">La tua mail è in lista</h4>
+        <h4 id="no-lista" class="d-none">
+          La tua mail <span>NON</span> è in lista
+        </h4>
+      </div>
     </main>
 
     <script src="js/main.js"></script>
