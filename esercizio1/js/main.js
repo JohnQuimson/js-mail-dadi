@@ -3,6 +3,7 @@
 const btnInvio = document.getElementById('invio');
 const elementSiLista = document.getElementById('si-lista');
 const elementNoLista = document.getElementById('no-lista');
+const elementNoInput = document.getElementById('no-input');
 btnInvio.addEventListener('click', function () {
   //Estraggo il valore dell'input con id email
   const elementMail = document.getElementById('email').value;
@@ -20,22 +21,28 @@ btnInvio.addEventListener('click', function () {
   //Dichiaro una variabile verifica con false
   let verifica = false;
 
-  //Itero gli elementi dell'array
-  for (let i = 0; i < arrayMail.length; i++) {
-    //verifico se input è uguale all elemento array[i]
-    if (arrayMail[i] === elementMail) {
-      verifica = true;
+  //Verifica che non inserisci un campo vuoto
+  if (elementMail !== '') {
+    //Itero gli elementi dell'array
+    for (let i = 0; i < arrayMail.length; i++) {
+      //verifico se input è uguale all elemento array[i]
+      if (arrayMail[i] === elementMail) {
+        verifica = true;
+      }
     }
-  }
 
-  //Condizioni di stampa
-  if (verifica === true) {
-    console.log('La tua mail è in lista');
-    //se si verifica la condizione, rimuovi la classe d-none
-    elementSiLista.classList.remove('d-none');
+    //Condizioni di stampa
+    if (verifica === true) {
+      console.log('La tua mail è in lista');
+      //se si verifica la condizione, rimuovi la classe d-none
+      elementSiLista.classList.remove('d-none');
+    } else {
+      console.log('La tua mail NON è in lista');
+      //se si verifica la condizione, rimuovi la classe d-none
+      elementNoLista.classList.remove('d-none');
+    }
   } else {
-    console.log('La tua mail NON è in lista');
-    //se si verifica la condizione, rimuovi la classe d-none
-    elementNoLista.classList.remove('d-none');
+    console.log('Non hai inserito una mail');
+    elementNoInput.classList.remove('d-none');
   }
 });
